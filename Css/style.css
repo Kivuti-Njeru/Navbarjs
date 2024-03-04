@@ -1,0 +1,240 @@
+/* Fluid font size variables, for browsers that support clamp */
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+    --fs-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --fs-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+    --fs-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+    --fs-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+    --fs-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --fs-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+  }
+}
+
+/* Fallback variables for browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-sm: 0.8rem;
+    --fs-base: 1rem;
+    --fs-md: 1.25rem;
+    --fs-lg: 1.56rem;
+    --fs-xl: 1.95rem;
+    --fs-xxl: 2.44rem;
+    --fs-xxxl: 3.05rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    :root {
+      --fs-sm: 0.89rem;
+      --fs-base: 1.19rem;
+      --fs-md: 1.58rem;
+      --fs-lg: 2.11rem;
+      --fs-xl: 2.81rem;
+      --fs-xxl: 3.75rem;
+      --fs-xxxl: 5rem;
+    }
+  }
+}
+
+:root {
+  /* COLORS */
+  --clr-dark: ;
+  --clr-light: ;
+  --clr-links: ;
+  --clr-title: ;
+  --clr-hex: ;
+  --clr-js: ;
+
+  /* sizes */
+
+  --sp-xs5: .05rem;
+  --sp-xs4: .15rem;
+  --sp-xs3: .25rem;
+  --sp-xs2: .45rem;
+  --sp-xs1: .65rem;
+  --sp-xs: .75rem;
+  --sp-sm: .85rem;
+  --sp-base: 1rem;
+  --sp-lg: 1.125rem;
+  --sp-xl: 1.25rem;
+  --sp-xl1: 1.5rem;
+  --sp-xl2: 1.874rem;
+  --sp-xl3: 2.25rem;
+  --sp-xl4: 3rem;
+  --sp-xl5: 3.75rem;
+  --sp-xl6: 4.5rem;
+  --sp-xl7: 6rem;
+  --sp-xl8: 8rem;
+  --sp-xxl: 10rem;
+}
+
+* {
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+html::-webkit-scrollbar{
+  width: .6vw;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: #5555;
+}
+
+html::-webkit-scrollbar-thumb:hover{
+  background-color: #555;
+}
+
+html::-webkit-scrollbar-track{
+  background-color: #aaa8;
+}
+
+html::-webkit-scrollbar-track:hover{
+  background-color: #aaa;
+}
+
+body {
+  position: relative;
+  scrollbar-gutter: stable;
+  background: #f3f3f3;
+  color: #0a0a0a;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target){
+    scroll-behavior: smooth;
+    scroll-margin-top: 1.5rem;
+  }
+}
+
+/* xs */
+/* @media (min-width: 475px) {
+    
+} */
+
+/* sm */
+/* @media (min-width: 640px) {
+    
+} */
+
+/* md */
+/* @media (min-width: 768px) {
+   
+} */
+
+/* lg */
+/* @media (min-width: 1024px) {
+   
+} */
+
+/* xl */
+/* @media (min-width: 1280px) {
+    
+} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {
+    
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  max-width: 70ch;
+  text-wrap: pretty;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all .3s ease;
+  background-color: transparent;
+}
+
+.spacer {
+  margin-top: var(--size-5xl);
+}
+
+.btn {
+  transition: scale .15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  scale: 1.03;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
