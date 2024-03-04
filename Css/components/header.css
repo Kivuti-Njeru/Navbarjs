@@ -7,7 +7,6 @@ header{
     border-bottom-right-radius: var(--sp-xs3);
     border-bottom-left-radius: var(--sp-xs3);
     padding: .5em .8em;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .header{
@@ -77,6 +76,7 @@ nav{
 }
 
 .icon{
+    -webkit-tap-highlight-color: transparent;
     display: grid;
     place-items: center;
     position: relative;
